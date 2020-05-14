@@ -1,7 +1,10 @@
 import React from 'react';
 import Navbar from './Components/Navbar';
+import RestaurantList from './Components/RestaurantList';
 
 class App extends React.Component {
+  state = { restaurants: [] };
+
   onSearchSubmit = term => {
     fetch('https://code-challenge.spectrumtoolbox.com/api/restaurants', {
       headers: {
@@ -9,7 +12,7 @@ class App extends React.Component {
       },
     })
       .then(res => res.json())
-      .then(data => console.log(data));
+      .then(data => this.setState({ restaurants: data }));
   };
 
   render() {
@@ -17,6 +20,7 @@ class App extends React.Component {
       <div className='container'>
         <div className='col s12'>
           <Navbar onSubmit={this.onSearchSubmit} />
+          <RestaurantList restaurants={this.state.restaurants} />
         </div>
       </div>
     );

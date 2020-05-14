@@ -19,7 +19,7 @@ class Navbar extends React.Component {
               value={this.state.term}
               onChange={e => this.setState({ term: e.target.value })}
             />
-            <label className='label-icon' for='search'>
+            <label className='label-icon' htmlFor='search'>
               <i className='material-icons'>search</i>
             </label>
             <i className='material-icons'>close</i>
