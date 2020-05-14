@@ -5,7 +5,7 @@ import RestaurantList from './Components/RestaurantList';
 class App extends React.Component {
   state = { restaurants: [] };
 
-  onSearchSubmit = term => {
+  onSearchSubmit = () => {
     fetch('https://code-challenge.spectrumtoolbox.com/api/restaurants', {
       headers: {
         Authorization: 'Api-Key q3MNxtfep8Gt',

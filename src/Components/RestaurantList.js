@@ -7,13 +7,10 @@ const RestaurantList = props => {
       <RestaurantCard
         key={rest.id}
         name={rest.name}
-        address={rest.address1}
         city={rest.city}
         stateIn={rest.state}
-        zipCode={rest.zip}
-        telephone={rest.telephone}
-        website={rest.website}
-        hours={rest.hours}
+        phoneNumber={rest.telephone}
+        genre={rest.genre}
       />
     );
   });
