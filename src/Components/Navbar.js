@@ -22,7 +22,11 @@ class Navbar extends React.Component {
             <label className='label-icon' htmlFor='search'>
               <i className='material-icons'>search</i>
             </label>
-            <i className='material-icons'>close</i>
+            <i
+              className='material-icons'
+              onClick={() => this.setState({ term: '' })}>
+              close
+            </i>
           </div>
         </form>
       </div>
