@@ -2,7 +2,10 @@ import React from 'react';
 import RestaurantCard from './RestaurantCard';
 
 const RestaurantList = props => {
-  const restaurants = props.restaurants.map(rest => {
+  let filterRestaurants = props.restaurants.filter(restaurant => {
+    return restaurant.genre.indexOf(props.queryTerm) !== -1;
+  });
+  const restaurants = filterRestaurants.map(rest => {
     return (
       <RestaurantCard
         key={rest.id}
