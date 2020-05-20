@@ -6,7 +6,7 @@ const RestaurantCard = ({ name, genre, city, stateIn, phoneNumber }) => {
       <div className='card-content white-text'>
         <span className='card-title'>{name}</span>
         <p>
-          Location: {city} {stateIn}{' '}
+          Location: {`${city}, ${stateIn}`}
         </p>
         <p>Phone number: {phoneNumber}</p>
       </div>
